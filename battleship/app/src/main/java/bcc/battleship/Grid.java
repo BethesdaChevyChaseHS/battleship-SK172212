@@ -74,7 +74,7 @@ public class Grid {
         int col = s.getCol();
         if(s.getDirection()== Constants.HORIZONTAL){
             for(int i =0;i<s.getLength();i++){
-                if(!board[row][col+i].hasShip() && col+s.getLength() < board[0].length)
+                if(!board[row][col+i].hasShip() && col+s.getLength() <= board[0].length)
                 {
                     board[row][col+i].setShip(true);
                 }
@@ -86,7 +86,7 @@ public class Grid {
         }
         if(s.getDirection()== Constants.VERTICAL){
             for(int i =0;i< s.getLength();i++){
-               if(!board[row+i][col].hasShip() && row+ s.getLength() < board.length)
+               if(!board[row+i][col].hasShip() && row+ s.getLength() <= board.length)
                {
                   board[row+i][col].setShip(true);
                }
